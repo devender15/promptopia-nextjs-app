@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
+import { motion as m } from "framer-motion";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
-    <div className="mt-16 prompt_layout">
+    <m.div layout className="mt-16 prompt_layout">
       {data.map((post) => (
         <PromptCard
           key={post._id}
@@ -14,7 +15,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
           handleTagClick={handleTagClick}
         />
       ))}
-    </div>
+    </m.div>
   );
 };
 
